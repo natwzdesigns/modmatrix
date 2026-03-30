@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Mod Matrix — About</title>
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" href="assets/haha.ico"/>
+  <link rel="shortcut icon" href="assets/haha.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/haha.ico"/>
+  <meta name="msapplication-TileImage" content="assets/haha.ico"/>
+  <meta name="theme-color" content="#0a0000"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="ExoCubeYT"/>
+  <meta name="keywords" content="minecraft clients, free minecraft, ghost client, MCPE mods, java client, bedrock, mod matrix, ExoCubeYT"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="About — Mod Matrix"/>
+  <meta property="og:description" content="Mod Matrix is a free Minecraft client review site by ExoCubeYT covering Java, Bedrock and MCPE. 100K+ downloads."/>
+  <meta property="og:url" content="https://modmatrix.in/about"/>
+  <meta property="og:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta property="og:site_name" content="Mod Matrix"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="About — Mod Matrix"/>
+  <meta name="twitter:description" content="Mod Matrix is a free Minecraft client review site by ExoCubeYT covering Java, Bedrock and MCPE. 100K+ downloads."/>
+  <meta name="twitter:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta name="twitter:creator" content="@ExoCubeYT"/>
+  <link rel="canonical" href="https://modmatrix.in/about"/>
+  <link rel="apple-touch-icon" href="assets/haha.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/haha.ico"/>
+  <style>.icon-img{width:20px;height:20px;object-fit:contain;display:block;} .intro-icon img{width:22px;height:22px;object-fit:contain;} .tl-dot img{width:20px;height:20px;object-fit:contain;} .link-icon img{width:28px;height:28px;object-fit:contain;}</style>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    .about-wrap{max-width:1100px;margin:0 auto;padding:calc(var(--nav-h) + 40px) 20px 80px;}
+
+        .intro{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin-bottom:60px;}
+    @media(max-width:700px){.intro{grid-template-columns:1fr;gap:24px;}}
+    .intro-text h1{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:900;margin-bottom:16px;}
+    .intro-text p{color:var(--muted);font-size:.88rem;line-height:1.8;margin-bottom:12px;}
+    .intro-card{background:var(--glass);border:1px solid var(--red-border);backdrop-filter:blur(16px);border-radius:14px;padding:28px;display:flex;flex-direction:column;gap:16px;}
+    .intro-row{display:flex;align-items:center;gap:12px;}
+    .intro-icon{width:40px;height:40px;border-radius:10px;background:var(--glass2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;}
+    .intro-info strong{display:block;font-size:.86rem;font-weight:700;margin-bottom:2px;}
+    .intro-info span{color:var(--muted);font-size:.76rem;}
+
+        .tl-section{margin-bottom:56px;}
+    .tl-section h2{font-family:'Orbitron',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);font-weight:900;margin-bottom:28px;margin-top:10px;}
+    .timeline{position:relative;padding-left:52px;}
+    .timeline::before{content:'';position:absolute;left:19px;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,var(--red),rgba(180,0,0,.1));}
+    .tl-item{position:relative;margin-bottom:28px;}
+    .tl-dot{position:absolute;left:-52px;top:4px;width:38px;height:38px;border-radius:10px;background:var(--glass);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:border-color .2s;}
+    .tl-item:hover .tl-dot{border-color:var(--red-border);}
+    .tl-year{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--red2);margin-bottom:3px;}
+    .tl-title{font-family:'Orbitron',sans-serif;font-size:.88rem;font-weight:800;margin-bottom:5px;}
+    .tl-text{color:var(--muted);font-size:.82rem;line-height:1.7;}
+
+        .faq-section{margin-bottom:56px;}
+    .faq-section h2{font-family:'Orbitron',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);font-weight:900;margin-bottom:20px;margin-top:10px;}
+    .faq-list{display:flex;flex-direction:column;gap:9px;}
+    .faq-item{background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(14px);border-radius:11px;overflow:hidden;}
+    .faq-q{width:100%;background:none;border:none;color:var(--text);font-family:'Inter',sans-serif;font-size:.88rem;font-weight:600;text-align:left;padding:16px 18px;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;transition:background .2s;}
+    .faq-q:hover{background:var(--glass2);}
+    .faq-arrow{color:var(--red2);font-size:.9rem;transition:transform .3s;flex-shrink:0;}
+    .faq-item.open .faq-arrow{transform:rotate(180deg);}
+    .faq-a{max-height:0;overflow:hidden;transition:max-height .38s ease;}
+    .faq-item.open .faq-a{max-height:220px;}
+    .faq-a-inner{padding:0 18px 16px;color:var(--muted);font-size:.84rem;line-height:1.75;}
+
+        .links-section h2{font-family:'Orbitron',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);font-weight:900;margin-bottom:20px;margin-top:10px;}
+    .links-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+    @media(max-width:700px){.links-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:360px){.links-grid{grid-template-columns:1fr;}}
+    .link-card{background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(14px);border-radius:11px;padding:18px 16px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:12px;transition:transform .2s,border-color .2s,box-shadow .2s;}
+    .link-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(0,0,0,.35);border-color:var(--red-border);}
+    .link-icon{font-size:1.5rem;flex-shrink:0;} .gr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;} @media(max-width:700px){.gr-grid{grid-template-columns:1fr;}}
+    .link-name{font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:700;margin-bottom:2px;}
+    .link-sub{font-size:.7rem;color:var(--muted);}
+  </style>
+</head>
+<body>
+<div class="noise"></div><div class="orb orb1"></div><div class="orb orb2"></div>
+<video id="bg-video" autoplay muted loop playsinline></video>
+<canvas id="bg-canvas"></canvas><div class="bg-gradient"></div>
+<div id="cursor-dot"></div><div id="cursor-ring"></div>
+<nav>
+  <a class="logo" href="index.html" data-glitch>MOD MATRIX</a>
+  <ul class="nav-center">
+    <li><a href="index.html">Home</a></li><li><a href="clients.html">Clients</a></li>
+    <li><a href="arsenal.html">Arsenal</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social"><a class="nav-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" class="icon-img"/></a><a class="nav-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" class="icon-img"/></a></div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a><a href="clients.html">Clients</a><a href="arsenal.html">Arsenal</a><a href="about.html" class="active">About</a>
+  <div class="mobile-menu-divider"></div>
+  <div class="mobile-menu-socials"><a class="ms-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> YouTube</a><a class="ms-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> Discord</a></div>
+</div>
+<div class="wrapper">
+  <div class="about-wrap">
+
+        <div class="intro reveal">
+      <div class="intro-text">
+        <div class="sec-tag">// The Channel</div>
+        <h1>About <span style="color:var(--red2)">Mod Matrix</span></h1>
+        <p>Mod Matrix is a Minecraft content project by ExoCubeYT — a YouTuber covering client reviews, texture pack reviews, and mod downloads across Java, Bedrock and MCPE. ExoCubeYT is also a co-founder of <strong style="color:var(--text)">Lumina Client</strong>, an advanced Bedrock &amp; MCPE utility client.</p>
+        <p>The site exists to give the community a clean, permanent place to find download links for every reviewed client — all in one place, with version history and platform info.</p>
+        <p>Over 100K+ downloads served through the channel and site combined.</p>
+      </div>
+      <div class="intro-card">
+        <div class="intro-row"><div class="intro-icon"><img src="assets/youtube.png" alt="YouTube"/></div><div class="intro-info"><strong>ExoCubeYT</strong><span>YouTube · Client Reviews & Tutorials</span></div></div>
+        <div class="intro-row"><div class="intro-icon"><img src="assets/java.png" alt="Java"/></div><div class="intro-info"><strong>Java Edition</strong><span>Ghost clients, PvP clients, utility mods</span></div></div>
+        <div class="intro-row"><div class="intro-icon"><img src="assets/bedrock.png" alt="Bedrock"/></div><div class="intro-info"><strong>Bedrock Edition</strong><span>Clients, tools and packs for Bedrock</span></div></div>
+        <div class="intro-row"><div class="intro-icon"><img src="assets/mcpe.png" alt="MCPE"/></div><div class="intro-info"><strong>MCPE / Mobile</strong><span>Utility mods and clients for PE</span></div></div>
+        <div class="intro-row"><div class="intro-icon"><img src="assets/meow.png" alt="Lumina" onerror="this.src='assets/flash.png'"/></div><div class="intro-info"><strong>Lumina Client</strong><span>Co-Founder · Bedrock &amp; MCPE utility client</span></div></div>
+        <div class="intro-row"><div class="intro-icon"><img src="assets/downloads.png" alt="Downloads"/></div><div class="intro-info"><strong>100K+ Downloads</strong><span>Across channel and site combined</span></div></div>
+      </div>
+    </div>
+
+        <div class="tl-section reveal">
+      <div class="sec-tag">// History</div>
+      <h2>How it <span style="background:linear-gradient(90deg,var(--red2),#ff6666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">started</span></h2>
+      <div class="timeline">
+        <div class="tl-item"><div class="tl-dot"><img src="assets/start.png" alt=""/></div><div class="tl-year">2022</div><div class="tl-title">Channel Launches</div><p class="tl-text">ExoCubeYT channel starts on YouTube. First Minecraft client reviews and download tutorials. Small but dedicated audience begins building.</p></div>
+        <div class="tl-item"><div class="tl-dot"><img src="assets/flash.png" alt=""/></div><div class="tl-year">2023</div><div class="tl-title">Lumina Client Co-Founded</div><p class="tl-text">ExoCubeYT becomes one of two founders of Lumina Client — an advanced Minecraft Bedrock utility client with cross-platform proxy support. Lumina quickly gains traction in the community.</p></div>
+        <div class="tl-item"><div class="tl-dot"><img src="assets/expand.png" alt=""/></div><div class="tl-year">2024</div><div class="tl-title">Scope Expands</div><p class="tl-text">Content grows from MCPE into Java and Bedrock. Lumina Client continues development and grows its user base. Focus expands to reviewing the best external clients across all three platforms.</p></div>
+        <div class="tl-item"><div class="tl-dot"><img src="assets/rocket.png" alt=""/></div><div class="tl-year">2025</div><div class="tl-title">Mod Matrix Launches</div><p class="tl-text">The project gets a proper home — Mod Matrix. A full site covering Java, Bedrock and MCPE clients with version history, platform tags, and a clean download experience.</p></div>
+      </div>
+    </div>
+
+        <div class="faq-section reveal">
+      <div class="sec-tag">// FAQ</div>
+      <h2>Common <span style="background:linear-gradient(90deg,var(--red2),#ff6666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Questions</span></h2>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-q">Are these clients safe?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-a-inner">Every client listed has been personally reviewed on the YouTube channel. That said, always scan files with your own antivirus — common sense applies with any third-party software.</div></div></div>
+        <div class="faq-item"><button class="faq-q">Do these work on Java / Bedrock / MCPE?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-a-inner">It depends on the client. Every card clearly shows platform badges (Java, Bedrock, MCPE) so you know before you click. All three platforms are covered on this site.</div></div></div>
+        <div class="faq-item"><button class="faq-q">Why do download links go through a link shortener?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-a-inner">Download links go through link shorteners to help support the channel. The actual files are the same — the shortener just lets the channel track clicks and earn a small amount per download to keep content going.</div></div></div>
+        <div class="faq-item"><button class="faq-q">How do I request a client to be reviewed?<span class="faq-arrow">▾</span></button><div class="faq-a"><div class="faq-a-inner">Join the Discord and drop a request there. YouTube comments also work. Discord is fastest for a response.</div></div></div>
+      </div>
+    </div>
+
+        <div class="get-reviewed reveal" style="margin-bottom:56px;">
+      <div class="sec-tag">// For Developers &amp; Studios</div>
+      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1.2rem,3vw,1.7rem);font-weight:900;margin-bottom:20px;margin-top:10px;">Want Your Client <span style="background:linear-gradient(90deg,var(--red2),#ff6666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Reviewed?</span></h2>
+      <div style="background:var(--glass);border:1px solid var(--red-border);backdrop-filter:blur(16px);border-radius:14px;padding:32px;position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(180,0,0,.08),transparent);pointer-events:none;"></div>
+        <p style="color:var(--muted);font-size:.9rem;line-height:1.85;margin-bottom:24px;position:relative;z-index:1;">
+          If you have a <strong style="color:var(--text)">paid or free Minecraft hack client, utility client, or related tool</strong> and want it featured and reviewed on Mod Matrix and the ExoCubeYT YouTube channel, reach out through any of the methods below. All platforms covered — Java, Bedrock, and MCPE.
+        </p>
+        <div class="gr-grid" style="position:relative;z-index:1;">
+          <a href="https://discord.gg/MXvYhg8Bdr" target="_blank" style="background:var(--glass2);border:1px solid var(--border2);border-radius:12px;padding:18px 16px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:12px;transition:border-color .2s,transform .2s;">
+            <img src="assets/discord.png" alt="Discord" style="width:28px;height:28px;object-fit:contain;flex-shrink:0;"/>
+            <div>
+              <div style="font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:700;margin-bottom:3px;">Discord</div>
+              <div style="font-size:.7rem;color:var(--muted);">Drop a DM or message in server</div>
+            </div>
+          </a>
+          <a href="https://youtube.com/c/ExoCubeYT" target="_blank" style="background:var(--glass2);border:1px solid var(--border2);border-radius:12px;padding:18px 16px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:12px;transition:border-color .2s,transform .2s;">
+            <img src="assets/youtube.png" alt="YouTube" style="width:28px;height:28px;object-fit:contain;flex-shrink:0;"/>
+            <div>
+              <div style="font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:700;margin-bottom:3px;">YouTube</div>
+              <div style="font-size:.7rem;color:var(--muted);">Comment on any video or DM</div>
+            </div>
+          </a>
+          <a href="mailto:contacticecube@gmail.com" style="background:var(--glass2);border:1px solid var(--border2);border-radius:12px;padding:18px 16px;text-decoration:none;color:var(--text);display:flex;align-items:center;gap:12px;transition:border-color .2s,transform .2s;">
+            <img src="assets/email.png" alt="Email" style="width:28px;height:28px;object-fit:contain;flex-shrink:0;"/>
+            <div>
+              <div style="font-family:'Orbitron',sans-serif;font-size:.72rem;font-weight:700;margin-bottom:3px;">Email</div>
+              <div style="font-size:.7rem;color:var(--muted);">contacticecube@gmail.com</div>
+            </div>
+          </a>
+        </div>
+        <p style="color:var(--muted);font-size:.78rem;margin-top:18px;position:relative;z-index:1;">Both free and paid clients are welcome. Paid clients will be clearly disclosed as sponsored/paid reviews.</p>
+      </div>
+    </div>
+
+        <div class="links-section reveal">
+      <div class="sec-tag">// Find Me</div>
+      <h2>All <span style="background:linear-gradient(90deg,var(--red2),#ff6666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Links</span></h2>
+      <div class="links-grid">
+        <a class="link-card" href="https://youtube.com/c/ExoCubeYT" target="_blank"><span class="link-icon"><img src="assets/youtube.png" alt="YouTube"/></span><div><div class="link-name">YouTube</div><div class="link-sub">Reviews & Tutorials</div></div></a>
+        <a class="link-card" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><span class="link-icon"><img src="assets/discord.png" alt="Discord"/></span><div><div class="link-name">Discord</div><div class="link-sub">Community & Support</div></div></a>
+        <a class="link-card" href="https://github.com/ExoCubeYT" target="_blank"><span class="link-icon"><img src="assets/github.png" alt="GitHub"/></span><div><div class="link-name">GitHub</div><div class="link-sub">Source & Archives</div></div></a>
+        <a class="link-card" href="https://instagram.com/_exocube_yt" target="_blank"><span class="link-icon"><img src="assets/instagram.png" alt="Instagram"/></span><div><div class="link-name">Instagram</div><div class="link-sub">@_exocube_yt</div></div></a>
+      </div>
+    </div>
+
+  </div>
+  <footer><div class="footer-inner"><div class="footer-grid"><div class="footer-brand"><a class="logo" href="index.html">MOD MATRIX</a><p>Free Minecraft client reviews for Java, Bedrock &amp; MCPE.</p></div><div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="clients.html">Clients</a><a href="arsenal.html">Arsenal</a><a href="about.html">About</a></div><div class="footer-col"><h4>Links</h4><a href="https://youtube.com/c/ExoCubeYT" target="_blank">YouTube</a><a href="https://discord.gg/MXvYhg8Bdr" target="_blank">Discord</a><a href="https://github.com/ExoCubeYT" target="_blank">GitHub</a></div>
+    <div class="footer-col"><h4>Legal</h4><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div></div><div class="footer-bottom"><p>© 2026 Mod Matrix by ExoCubeYT. Not affiliated with Mojang Studios.</p><div class="footer-socials"><a class="footer-social" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:16px;height:16px;object-fit:contain;"/></a><a class="footer-social" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:16px;height:16px;object-fit:contain;"/></a></div></div></div></footer>
+</div>
+<script src="shared.js"></script>
+<script>
+<script src="shared.js"></script>
+<script>
+document.querySelectorAll('.faq-q').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var item = btn.parentElement;
+    var wasOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); });
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+</body>
+</html>

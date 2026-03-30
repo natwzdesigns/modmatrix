@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" href="../assets/haha.ico"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="ExoCubeYT"/>
+  <meta name="keywords" content="minecraft client download, free minecraft, ghost client, mod matrix, ExoCubeYT, scald client"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Scald Client — Mod Matrix"/>
+  <meta property="og:description" content="Download Scald Client for Minecraft. Reviewed by ExoCubeYT on Mod Matrix."/>
+  <meta property="og:url" content="https://modmatrix.in/clients/scald"/>
+  <meta property="og:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta property="og:site_name" content="Mod Matrix"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Scald Client — Mod Matrix"/>
+  <meta name="twitter:description" content="Download Scald Client for Minecraft. Reviewed by ExoCubeYT on Mod Matrix."/>
+  <meta name="twitter:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta name="twitter:creator" content="@ExoCubeYT"/>
+  <link rel="canonical" href="https://modmatrix.in/clients/scald"/>
+  <link rel="apple-touch-icon" href="../assets/haha.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/haha.ico"/>
+  <title>Mod Matrix — Client</title>
+  <link rel="stylesheet" href="../shared.css"/>
+  <style>
+    /* client detail page styles */
+
+        .ch-wrap {
+      max-width: 1100px; margin: 0 auto;
+      padding: calc(var(--nav-h) + 40px) 20px 60px;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 48px; align-items: start;
+    }
+    @media(max-width:768px){
+      .ch-wrap { grid-template-columns: 1fr; gap: 28px; padding-top: calc(var(--nav-h) + 24px); }
+      .ch-right { order: -1; }
+    }
+
+        .ch-back {
+      display: inline-flex; align-items: center; gap: 6px;
+      color: var(--muted); font-size: .78rem; font-weight: 500; letter-spacing: .05em;
+      text-decoration: none; margin-bottom: 20px;
+      transition: color .2s;
+    }
+    .ch-back:hover { color: var(--red2); }
+
+        .ch-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .ch-tag {
+      font-size: .62rem; font-weight: 700; letter-spacing: .09em; text-transform: uppercase;
+      padding: 3px 10px; border-radius: 6px;
+      background: var(--red-dim); border: 1px solid var(--red-border); color: var(--red2);
+    }
+    .ch-name {
+      font-family: 'Orbitron', sans-serif;
+      font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; line-height: 1;
+      margin-bottom: 14px;
+      background: linear-gradient(135deg, #fff 0%, #ffaaaa 50%, var(--red2) 100%);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+    }
+    .ch-plats { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 18px; }
+    .ch-desc { color: var(--muted); font-size: .92rem; line-height: 1.8; margin-bottom: 28px; }
+    .ch-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+    @media(max-width:420px){ .ch-actions .btn { flex: 1; justify-content: center; } }
+
+        .ch-thumb-wrap {
+      border-radius: 14px; overflow: hidden;
+      border: 1px solid var(--red-border);
+      box-shadow: 0 20px 60px rgba(0,0,0,.6), 0 0 40px rgba(180,0,0,.08);
+      position: relative; aspect-ratio: 16/9;
+    }
+    .ch-thumb { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .ch-status-badge {
+      position: absolute; top: 12px; right: 12px;
+    }
+
+        .section-divider {
+      height: 1px; max-width: 1100px; margin: 0 auto;
+      background: linear-gradient(90deg, transparent, var(--red-border), transparent);
+    }
+
+        .ch-features { max-width: 1100px; margin: 0 auto; padding: 52px 20px; }
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      gap: 12px; margin-top: 32px;
+    }
+    @media(max-width:480px){ .features-list{grid-template-columns:1fr;} }
+    .feat-item {
+      background: var(--glass); border: 1px solid var(--border);
+      backdrop-filter: blur(12px); border-radius: 10px;
+      padding: 14px 16px; display: flex; align-items: center; gap: 10px;
+      transition: border-color .2s, background .2s;
+    }
+    .feat-item:hover { background: var(--glass2); border-color: var(--red-border); }
+    .feat-check { color: var(--red2); font-size: .9rem; flex-shrink: 0; }
+    .feat-text  { font-size: .83rem; }
+
+        .ch-versions { max-width: 1100px; margin: 0 auto; padding: 0 20px 80px; }
+    .versions-list { margin-top: 32px; display: flex; flex-direction: column; gap: 12px; }
+    .ver-card {
+      background: var(--glass); border: 1px solid var(--border);
+      backdrop-filter: blur(16px); border-radius: 12px;
+      padding: 18px 22px;
+      display: grid;
+      grid-template-columns: auto auto 1fr auto auto;
+      align-items: center; gap: 16px;
+      transition: border-color .2s;
+    }
+    .ver-card.latest { border-color: var(--red-border); box-shadow: 0 0 24px rgba(160,0,0,.08); }
+    .ver-card:hover  { border-color: rgba(200,0,0,.35); }
+
+        @media(max-width:600px){
+      .ver-card { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; gap: 10px; }
+      .ver-notes { grid-column: 1 / -1; }
+      .ver-dl    { grid-column: 1 / -1; width: 100%; justify-content: center; }
+    }
+
+    .ver-num  { font-family:'Orbitron',sans-serif; font-size:.9rem; font-weight:800; }
+    .ver-lbl  { padding:3px 11px; border-radius:100px; font-size:.62rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; white-space:nowrap; }
+    .lbl-latest { background:linear-gradient(135deg,var(--red),#880000); color:#fff; }
+    .lbl-stable { background:rgba(80,200,80,.12); border:1px solid rgba(80,200,80,.28); color:#80ff80; }
+    .lbl-legacy { background:rgba(200,200,200,.07); border:1px solid rgba(200,200,200,.15); color:var(--muted); }
+    .lbl-beta   { background:rgba(255,180,0,.12); border:1px solid rgba(255,180,0,.28); color:#ffcc44; }
+    .ver-date   { color:var(--muted); font-size:.78rem; white-space:nowrap; }
+    .ver-notes  { color:var(--muted); font-size:.8rem; }
+    .ver-dl {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 20px; border-radius: 8px; white-space: nowrap;
+      font-family: 'Inter', sans-serif; font-size: .78rem; font-weight: 600;
+      text-decoration: none; cursor: pointer; border: none;
+      transition: opacity .15s, transform .15s;
+    }
+    .ver-dl:hover { opacity: .85; transform: translateY(-1px); }
+    .dl-main { background: linear-gradient(135deg, var(--red), #880000); color: #fff; box-shadow: 0 4px 14px rgba(160,0,0,.35); }
+    .dl-old  { background: var(--glass); border: 1px solid var(--border2); color: var(--muted); }
+    .dl-old:hover { color: var(--text); border-color: var(--red-border); }
+  </style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="orb orb1"></div><div class="orb orb2"></div>
+<video id="bg-video" autoplay muted loop playsinline></video>
+<canvas id="bg-canvas"></canvas>
+<div class="bg-gradient"></div>
+<div id="cursor-dot"></div><div id="cursor-ring"></div>
+
+<nav>
+  <a class="logo" href="../index.html" data-glitch>MOD MATRIX</a>
+  <ul class="nav-center">
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="../clients.html" class="active">Clients</a></li>
+    <li><a href="../arsenal.html">Arsenal</a></li>
+    <li><a href="../about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a class="nav-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="../assets/youtube.png" alt="YouTube" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+      <a class="nav-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="../assets/discord.png" alt="Discord" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="../index.html">Home</a><a href="../clients.html" class="active">Clients</a>
+  <a href="../arsenal.html">Arsenal</a><a href="../about.html">About</a>
+  <div class="mobile-menu-divider"></div>
+  <div class="mobile-menu-socials">
+    <a class="ms-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="../assets/youtube.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> YouTube</a>
+    <a class="ms-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="../assets/discord.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> Discord</a>
+  </div>
+</div>
+
+<div class="wrapper" id="page-root">
+  </div>
+
+<script src="../clients-data.js"></script>
+<script src="../shared.js"></script>
+<script>
+const PLAT_LABELS={java:'<img src="../assets/java.png" style="width:12px;height:12px;object-fit:contain;vertical-align:middle;margin-right:3px;"/> Java',bedrock:'<img src="../assets/bedrock.png" style="width:12px;height:12px;object-fit:contain;vertical-align:middle;margin-right:3px;"/> Bedrock',mcpe:'<img src="../assets/mcpe.png" style="width:12px;height:12px;object-fit:contain;vertical-align:middle;margin-right:3px;"/> MCPE'};
+const PLAT_CLS={java:'plat-java',bedrock:'plat-bedrock',mcpe:'plat-mcpe'};
+const STATUS_LBL={active:'Active',discontinued:'Discontinued',beta:'Beta'};
+const STATUS_CLS={active:'status-active',discontinued:'status-discontinued',beta:'status-beta'};
+const LBL_CLS={Latest:'lbl-latest',Stable:'lbl-stable',Legacy:'lbl-legacy',Beta:'lbl-beta'};
+
+const slug=location.pathname.split('/').pop().replace('.html','');
+const c=CLIENTS.find(x=>x.id===slug);
+const root=document.getElementById('page-root');
+
+if(!c){
+  root.innerHTML='<p style="text-align:center;padding:140px 20px;color:var(--muted)">Client not found. <a href="../clients.html" style="color:var(--red2)">Go back</a></p>';
+} else {
+  document.title=`Mod Matrix — ${c.name}`;
+  const platsHtml=c.platforms.map(p=>`<span class="plat ${PLAT_CLS[p]}">${PLAT_LABELS[p]}</span>`).join('');
+  const tagsHtml=(c.tags||[]).map(t=>`<span class="ch-tag">${t}</span>`).join('');
+  const featsHtml=(c.features||[]).map(f=>`<div class="feat-item reveal"><span class="feat-check">✦</span><span class="feat-text">${f}</span></div>`).join('');
+  const versHtml=(c.versions||[]).map((v,i)=>`
+    <div class="ver-card ${i===0?'latest':''} reveal" style="transition-delay:${i*.06}s">
+      <span class="ver-num">${v.ver}</span>
+      <span class="ver-lbl ${LBL_CLS[v.label]||'lbl-legacy'}">${v.label}</span>
+      <span class="ver-date">${v.date}</span>
+      <span class="ver-notes">${v.notes||''}</span>
+      <a class="ver-dl ${i===0?'dl-main':'dl-old'}" href="${v.dlUrl}" target="_blank">
+        <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        ${i===0?'Download Latest':'Download'}
+      </a>
+    </div>`).join('');
+
+  root.innerHTML=`
+    <div class="ch-wrap">
+      <div class="ch-left">
+        <a class="ch-back" href="../clients.html">← All Clients</a>
+        <div class="ch-tags">${tagsHtml}</div>
+        <div class="ch-name">${c.name}</div>
+        <div class="ch-plats">${platsHtml}</div>
+        <p class="ch-desc">${c.longDesc||c.desc}</p>
+        <div class="ch-actions">
+          <a class="btn btn-red" href="${(c.versions||[])[0]?.dlUrl||'#'}" target="_blank">
+            <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+            Download Latest
+          </a>
+          <a class="btn btn-ghost" href="https://youtube.com/c/ExoCubeYT" target="_blank">Watch Review</a>
+        </div>
+      </div>
+      <div class="ch-right">
+        <div class="ch-thumb-wrap">
+          <span class="ch-status-badge status ${STATUS_CLS[c.status]}">${STATUS_LBL[c.status]}</span>
+          <img class="ch-thumb" src="${c.thumbDetail||c.thumb}" alt="${c.name}" onerror="this.style.opacity='.2'"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="ch-features">
+      <div class="sec-tag">// Features</div>
+      <h2 class="sec-title">What's <span class="grad">included</span></h2>
+      <div class="features-list">${featsHtml}</div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <div class="ch-versions">
+      <div class="sec-tag">// Downloads</div>
+      <h2 class="sec-title">All <span class="grad">Versions</span></h2>
+      <p class="sec-sub" style="margin-bottom:0">Latest version first. Older builds below for compatibility.</p>
+      <div class="versions-list">${versHtml}</div>
+    </div>
+
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-grid">
+          <div class="footer-brand"><a class="logo" href="../index.html">MOD MATRIX</a><p>Free Minecraft client reviews for Java, Bedrock &amp; MCPE.</p></div>
+          <div class="footer-col"><h4>Pages</h4><a href="../index.html">Home</a><a href="../clients.html">Clients</a><a href="../arsenal.html">Arsenal</a><a href="../about.html">About</a></div>
+          <div class="footer-col"><h4>Links</h4><a href="https://youtube.com/c/ExoCubeYT" target="_blank">YouTube</a><a href="https://discord.gg/MXvYhg8Bdr" target="_blank">Discord</a><a href="https://github.com/ExoCubeYT" target="_blank">GitHub</a></div>
+          <div class="footer-col"><h4>Legal</h4><a href="../terms.html">Terms of Use</a><a href="../privacy.html">Privacy Policy</a><a href="../disclaimer.html">Disclaimer</a></div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 Mod Matrix by ExoCubeYT. Not affiliated with Mojang Studios.</p>
+          <div class="footer-socials"><a class="footer-social" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="../assets/youtube.png" alt="YouTube" style="width:16px;height:16px;object-fit:contain;"/></a><a class="footer-social" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="../assets/discord.png" alt="Discord" style="width:16px;height:16px;object-fit:contain;"/></a></div>
+        </div>
+      </div>
+    </footer>`;
+
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible');}),{threshold:.08});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+}
+</script>
+</body>
+</html>

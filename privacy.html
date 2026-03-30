@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Privacy Policy — Mod Matrix</title>
+  <meta name="description" content="Privacy Policy for Mod Matrix. Learn how we handle your data and what information we collect."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="ExoCubeYT"/>
+  <meta property="og:title" content="Privacy Policy — Mod Matrix"/>
+  <meta property="og:description" content="Privacy Policy for Mod Matrix."/>
+  <meta property="og:url" content="https://modmatrix.in/privacy"/>
+  <meta property="og:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta property="og:site_name" content="Mod Matrix"/>
+  <meta name="twitter:card" content="summary"/>
+  <link rel="canonical" href="https://modmatrix.in/privacy"/>
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" href="assets/haha.ico"/>
+  <link rel="shortcut icon" href="assets/haha.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/haha.ico"/>
+  <meta name="msapplication-TileImage" content="assets/haha.ico"/>
+  <meta name="theme-color" content="#0a0000"/>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/haha.ico"/>
+  <link rel="apple-touch-icon" href="assets/haha.ico"/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    .legal-wrap{max-width:860px;margin:0 auto;padding:calc(var(--nav-h) + 52px) 24px 100px;}
+    .legal-header{margin-bottom:48px;}
+    .legal-header .sec-tag{margin-bottom:10px;}
+    .legal-header h1{font-family:'Orbitron',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:12px;}
+    .legal-header h1 span{background:linear-gradient(90deg,var(--red2),#ff6666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .legal-header p{color:var(--muted);font-size:.85rem;}
+    .legal-updated{display:inline-flex;align-items:center;gap:7px;background:var(--glass);border:1px solid var(--red-border);padding:5px 14px;border-radius:100px;font-size:.72rem;color:var(--red2);letter-spacing:.06em;margin-bottom:40px;}
+    .legal-section{margin-bottom:36px;}
+    .legal-section h2{font-family:'Orbitron',sans-serif;font-size:.9rem;font-weight:800;letter-spacing:.06em;margin-bottom:12px;color:var(--text);display:flex;align-items:center;gap:10px;}
+    .legal-section h2::before{content:'';display:block;width:3px;height:16px;background:var(--red);border-radius:2px;flex-shrink:0;}
+    .legal-section p,.legal-section li{color:var(--muted);font-size:.88rem;line-height:1.85;}
+    .legal-section ul{padding-left:20px;display:flex;flex-direction:column;gap:6px;margin-top:8px;}
+    .legal-section li::marker{color:var(--red2);}
+    .legal-divider{height:1px;background:linear-gradient(90deg,var(--red-border),transparent);margin:32px 0;}
+    .legal-nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:52px;padding-top:32px;border-top:1px solid var(--border);}
+    .legal-nav a{color:var(--muted);text-decoration:none;font-size:.8rem;padding:7px 16px;border-radius:8px;background:var(--glass);border:1px solid var(--border);transition:color .2s,border-color .2s;}
+    .legal-nav a:hover{color:var(--red2);border-color:var(--red-border);}
+    .legal-nav a.current{color:var(--red2);border-color:var(--red-border);}
+    .highlight-box{background:var(--glass);border:1px solid var(--red-border);border-radius:12px;padding:18px 20px;margin:16px 0;}
+    .highlight-box p{color:var(--text) !important;font-size:.88rem;line-height:1.75;}
+  </style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="orb orb1"></div><div class="orb orb2"></div>
+<canvas id="bg-canvas"></canvas>
+<div class="bg-gradient"></div>
+<div id="cursor-dot"></div><div id="cursor-ring"></div>
+
+<nav>
+  <a class="logo" href="index.html" data-glitch>MOD MATRIX</a>
+  <ul class="nav-center">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="clients.html">Clients</a></li>
+    <li><a href="arsenal.html">Arsenal</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a class="nav-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+      <a class="nav-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a><a href="clients.html">Clients</a>
+  <a href="arsenal.html">Arsenal</a><a href="about.html">About</a>
+  <div class="mobile-menu-divider"></div>
+  <div class="mobile-menu-socials">
+    <a class="ms-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> YouTube</a>
+    <a class="ms-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> Discord</a>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="legal-wrap">
+
+    <div class="legal-header">
+      <div class="sec-tag">// Legal</div>
+      <h1>Privacy <span>Policy</span></h1>
+      <p>This policy explains what information Mod Matrix collects, how it is used, and your rights regarding your data.</p>
+    </div>
+
+    <div class="legal-updated">📅 Last updated: March 2026</div>
+
+    <div class="highlight-box reveal">
+      <p>🔒 <strong>Short version:</strong> Mod Matrix does not collect, store, or sell any personal data. We don't have accounts, logins, or user tracking beyond standard hosting analytics.</p>
+    </div>
+
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>1. Information We Do Not Collect</h2>
+      <p>Mod Matrix does not require registration or login. We do not collect, store or process:</p>
+      <ul>
+        <li>Names, email addresses, or any personal identifiers</li>
+        <li>Account credentials of any kind</li>
+        <li>Payment or financial information</li>
+        <li>Chat logs or personal communications</li>
+        <li>Device identifiers or fingerprints</li>
+      </ul>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>2. Hosting &amp; Server Analytics</h2>
+      <p>Like all websites, basic server-level data may be logged by our hosting provider. This typically includes IP addresses, browser type, and pages visited. This data is used only for server performance and security monitoring, is not shared, and is not tied to any individual identity.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>3. Link Shorteners</h2>
+      <p>Download links on Mod Matrix may route through link shortener services (such as Linkvertise or similar). These third-party services may collect analytics data such as click counts, approximate location, and browser type to display ads and track performance. This data is collected by those third-party services — not by Mod Matrix — and is governed by their own privacy policies. We recommend reviewing the privacy policy of any link shortener service you interact with.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>4. Third-Party Links</h2>
+      <p>Mod Matrix links to third-party websites including YouTube, Discord, GitHub, and download hosts. We are not responsible for the privacy practices of those sites. We encourage you to review their privacy policies before submitting any personal data to them.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>5. Cookies</h2>
+      <p>Mod Matrix does not use cookies for tracking or advertising. Your browser may cache site assets (images, fonts, stylesheets) locally for performance — this is standard browser behaviour and not a tracking mechanism.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>6. Children's Privacy</h2>
+      <p>Mod Matrix does not knowingly collect any data from children under the age of 13. The Site is a general-purpose content resource. If you believe a child has submitted personal data to us, please contact us via Discord and we will address it promptly.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>7. Changes to This Policy</h2>
+      <p>This Privacy Policy may be updated from time to time. Changes take effect immediately upon being posted. The date at the top of this page reflects when it was last updated.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>8. Contact</h2>
+      <p>For any privacy-related questions, reach out via the <a href="https://discord.gg/MXvYhg8Bdr" target="_blank" style="color:var(--red2);text-decoration:none;">Mod Matrix Discord</a>.</p>
+    </div>
+
+    <div class="legal-nav">
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html" class="current">Privacy Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="logo" href="index.html">MOD MATRIX</a><p>Free Minecraft client reviews for Java, Bedrock &amp; MCPE. Reviewed by ExoCubeYT.</p></div>
+        <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="clients.html">Clients</a><a href="arsenal.html">Arsenal</a><a href="about.html">About</a></div>
+        <div class="footer-col"><h4>Links</h4><a href="https://youtube.com/c/ExoCubeYT" target="_blank">YouTube</a><a href="https://discord.gg/MXvYhg8Bdr" target="_blank">Discord</a><a href="https://github.com/ExoCubeYT" target="_blank">GitHub</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Mod Matrix by ExoCubeYT. Not affiliated with Mojang Studios.</p>
+        <div class="footer-socials">
+          <a class="footer-social" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:16px;height:16px;object-fit:contain;"/></a>
+          <a class="footer-social" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:16px;height:16px;object-fit:contain;"/></a>
+          <a class="footer-social" href="https://github.com/ExoCubeYT" target="_blank"><img src="assets/github.png" alt="GitHub" style="width:16px;height:16px;object-fit:contain;"/></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="shared.js"></script>
+</body>
+</html>

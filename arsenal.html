@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" href="assets/haha.ico"/>
+  <link rel="shortcut icon" href="assets/haha.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/haha.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/haha.ico"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="ExoCubeYT"/>
+  <meta name="keywords" content="minecraft texture packs, minecraft tools, fps boost pack, mcpe tools, mod matrix, ExoCubeYT"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Arsenal — Mod Matrix"/>
+  <meta property="og:description" content="Texture packs, tools and utilities for Minecraft. Reviewed by ExoCubeYT."/>
+  <meta property="og:url" content="https://modmatrix.in/arsenal"/>
+  <meta property="og:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta property="og:site_name" content="Mod Matrix"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Arsenal — Mod Matrix"/>
+  <meta name="twitter:description" content="Texture packs, tools and utilities for Minecraft. Reviewed by ExoCubeYT."/>
+  <meta name="twitter:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta name="twitter:creator" content="@ExoCubeYT"/>
+  <link rel="canonical" href="https://modmatrix.in/arsenal"/>
+  <title>Mod Matrix — Arsenal</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    .page-header{padding:calc(var(--nav-h)+40px) 20px 0;max-width:1100px;margin:0 auto;}
+    .page-header h1{font-family:'Orbitron',sans-serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:900;margin-bottom:6px;}
+    .page-header p{color:var(--muted);font-size:.88rem;}
+    .filter-wrap{max-width:1100px;margin:0 auto;padding:28px 20px 32px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+    .filter-btn{padding:9px 22px;border-radius:100px;background:var(--glass);border:1px solid var(--border);color:var(--muted);font-family:'Inter',sans-serif;font-size:.78rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:all .2s;white-space:nowrap;}
+    .filter-btn:hover{color:var(--text);background:var(--glass2);border-color:var(--border2);}
+    .filter-btn.active{background:linear-gradient(135deg,var(--red),#880000);border-color:transparent;color:#fff;box-shadow:0 4px 16px rgba(180,0,0,.35);}
+    .arsenal-wrap{max-width:1100px;margin:0 auto;padding:0 20px 100px;}
+    .packs-section{margin-bottom:52px;}
+    .section-divider-line{height:1px;background:linear-gradient(90deg,var(--red-border),transparent);margin-bottom:40px;}
+    .featured{background:var(--glass);border:1px solid var(--red-border);backdrop-filter:blur(20px);border-radius:14px;overflow:hidden;display:flex;margin-bottom:28px;position:relative;}
+    .featured::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(160,0,0,.1),transparent);pointer-events:none;}
+    .fp-img{width:42%;min-width:280px;flex-shrink:0;overflow:hidden;aspect-ratio:16/9;}
+    .fp-img img{width:100%;height:100%;object-fit:cover;display:block;min-height:100%;}
+    .fp-body{padding:32px 28px;display:flex;flex-direction:column;justify-content:center;gap:12px;position:relative;z-index:1;}
+    .fp-label{font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;color:var(--red2);font-weight:700;}
+    .fp-name{font-family:'Orbitron',sans-serif;font-size:clamp(1.1rem,3vw,1.6rem);font-weight:900;}
+    .fp-desc{color:var(--muted);font-size:.86rem;line-height:1.75;}
+    .fp-tags{display:flex;gap:6px;flex-wrap:wrap;}
+    .fp-tag{font-size:.62rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 9px;border-radius:6px;background:var(--red-dim);border:1px solid var(--red-border);color:var(--red2);}
+    .fp-actions{display:flex;gap:9px;flex-wrap:wrap;}
+    @media(max-width:700px){.featured{flex-direction:column;}.fp-img{width:100%;aspect-ratio:16/9;}.fp-body{padding:20px;}}
+    .packs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+    @media(max-width:900px){.packs-grid{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:640px){.packs-grid{grid-template-columns:repeat(2,1fr);gap:12px;}}
+    @media(max-width:360px){.packs-grid{grid-template-columns:1fr;}}
+    .pack-card{background:linear-gradient(145deg,rgba(255,255,255,.06),rgba(255,255,255,.02));border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:border-color .15s,transform .15s;opacity:0;transform:translateY(14px);}
+    .pack-card.card-in{opacity:1;transform:translateY(0);transition:opacity .4s ease,transform .4s ease,border-color .15s;}
+    .pack-card:hover{border-color:rgba(255,255,255,.2);transform:translateY(-2px);}
+    .pack-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative;background:var(--bg3);}
+    .pack-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .15s;}
+    .pack-card:hover .pack-thumb img{transform:scale(1.05);}
+    .pack-badge{position:absolute;top:8px;left:8px;background:rgba(10,0,0,.7);backdrop-filter:blur(8px);border:1px solid var(--red-border);padding:2px 9px;border-radius:6px;font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--red2);}
+    .pack-body{padding:11px 13px 13px;display:flex;flex-direction:column;gap:7px;flex:1;}
+    .pack-name{font-family:'Orbitron',sans-serif;font-size:.8rem;font-weight:700;color:#e06060;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+    .pack-desc{color:var(--muted);font-size:.76rem;line-height:1.6;flex:1;}
+    .pack-dl{display:flex;align-items:center;justify-content:center;gap:5px;background:linear-gradient(135deg,var(--red),#880000);border:none;border-radius:8px;color:#fff;font-family:'Inter',sans-serif;font-size:.76rem;font-weight:600;padding:9px;text-decoration:none;cursor:pointer;transition:filter .12s;width:100%;}
+    .pack-dl:hover{filter:brightness(1.1);}
+    @media(max-width:640px){.pack-body{padding:9px 11px 11px;}.pack-name{font-size:.76rem;}.pack-desc{font-size:.72rem;}.pack-dl{font-size:.72rem;padding:8px;}}
+    .bento{display:grid;grid-template-columns:repeat(12,1fr);gap:16px;}
+    @media(max-width:900px){.col-8,.col-4,.col-6{grid-column:span 12 !important;}}
+    @media(max-width:600px){.bento{gap:12px;}}
+    .col-12{grid-column:span 12;}.col-8{grid-column:span 8;}.col-4{grid-column:span 4;}.col-6{grid-column:span 6;}
+    .bc{background:var(--glass);border:1px solid var(--border);backdrop-filter:blur(16px);border-radius:var(--radius);padding:24px;position:relative;overflow:hidden;opacity:0;transform:translateY(14px);transition:border-color .2s,transform .25s,box-shadow .25s;}
+    .bc.card-in{opacity:1;transform:translateY(0);transition:opacity .4s ease,transform .4s ease,border-color .2s,box-shadow .25s;}
+    .bc:hover{transform:translateY(-4px);box-shadow:0 14px 36px rgba(0,0,0,.4);border-color:var(--red-border);}
+    .bc::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(160,0,0,.06),transparent);pointer-events:none;}
+    .bc.wide{display:flex;gap:24px;align-items:center;}
+    .bc.wide .ti{font-size:4rem;flex-shrink:0;margin-bottom:0;}
+    .ti{font-size:2.2rem;margin-bottom:14px;display:block;}
+    .tl{font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:var(--red2);margin-bottom:6px;}
+    .tn{font-family:'Orbitron',sans-serif;font-size:clamp(.85rem,2vw,1rem);font-weight:800;margin-bottom:8px;}
+    .td{color:var(--muted);font-size:.82rem;line-height:1.7;margin-bottom:14px;}
+    .pills{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px;}
+    .pill{background:var(--red-dim);border:1px solid var(--red-border);color:var(--red2);font-size:.62rem;font-weight:700;letter-spacing:.07em;padding:3px 10px;border-radius:6px;}
+    .wbody{flex:1;}
+    @media(max-width:900px){.bc.wide{flex-direction:column;align-items:flex-start;}.bc.wide .ti{font-size:2.5rem;margin-bottom:0;}}
+    @media(max-width:600px){.bc{padding:18px;}}
+    .packs-section.hidden,.tools-section.hidden,.section-divider-line.hidden{display:none;}
+  </style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="orb orb1"></div><div class="orb orb2"></div>
+<video id="bg-video" autoplay muted loop playsinline></video>
+<canvas id="bg-canvas"></canvas>
+<div class="bg-gradient"></div>
+<div id="cursor-dot"></div><div id="cursor-ring"></div>
+
+<nav>
+  <a class="logo" href="index.html" data-glitch>MOD MATRIX</a>
+  <ul class="nav-center">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="clients.html">Clients</a></li>
+    <li><a href="arsenal.html" class="active">Arsenal</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a class="nav-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+      <a class="nav-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="clients.html">Clients</a>
+  <a href="arsenal.html" class="active">Arsenal</a>
+  <a href="about.html">About</a>
+  <div class="mobile-menu-divider"></div>
+  <div class="mobile-menu-socials">
+    <a class="ms-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> YouTube</a>
+    <a class="ms-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> Discord</a>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="page-header">
+    <div class="sec-tag">// Packs &amp; Tools</div>
+    <h1>The <span style="color:var(--red2)">Arsenal</span></h1>
+    <p>Texture packs, utilities, launchers and tools — everything except clients, all in one place.</p>
+  </div>
+
+  <div class="filter-wrap">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="packs">Texture Packs</button>
+    <button class="filter-btn" data-filter="tools">Tools &amp; Utils</button>
+  </div>
+
+  <div class="arsenal-wrap">
+    <div class="packs-section" id="packs-section">
+      <div class="sec-tag" style="margin-bottom:18px;">// Texture Packs</div>
+      <div id="featured-pack-slot"></div>
+      <div class="packs-grid" id="packs-grid"></div>
+    </div>
+    <div class="section-divider-line" id="divider-line" style="margin-top:48px;"></div>
+    <div class="tools-section" id="tools-section">
+      <div class="sec-tag" style="margin-bottom:18px;">// Tools &amp; Utilities</div>
+      <div class="bento" id="tools-bento"></div>
+    </div>
+  </div>
+
+
+    <div style="max-width:1100px;margin:0 auto;padding:0 20px 60px;">
+      <div class="sec-tag">// Help</div>
+      <h2 style="font-family:'Orbitron',sans-serif;font-size:clamp(1.2rem,3vw,1.8rem);font-weight:900;margin-bottom:20px;margin-top:10px;">How to get through the <span style="background:linear-gradient(90deg,var(--red2),#ff6666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">download link</span></h2>
+      <div style="background:var(--glass);border:1px solid var(--red-border);backdrop-filter:blur(16px);border-radius:14px;padding:28px;position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(160,0,0,.08),transparent);pointer-events:none;"></div>
+        <p style="color:var(--muted);font-size:.88rem;line-height:1.8;margin-bottom:18px;position:relative;z-index:1;">Download links on Mod Matrix go through a link shortener. If you're unsure how to pass through it, watch the quick tutorial below — it takes less than 30 seconds.</p>
+        <a href="https://youtube.com/c/ExoCubeYT" target="_blank" class="btn btn-red" style="position:relative;z-index:1;">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 3l14 9-14 9V3z"/></svg>
+          Watch Tutorial
+        </a>
+      </div>
+    </div>
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="logo" href="index.html">MOD MATRIX</a><p>Free Minecraft client reviews for Java, Bedrock &amp; MCPE. Reviewed by ExoCubeYT.</p></div>
+        <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="clients.html">Clients</a><a href="arsenal.html">Arsenal</a><a href="about.html">About</a></div>
+        <div class="footer-col"><h4>Links</h4><a href="https://youtube.com/c/ExoCubeYT" target="_blank">YouTube</a><a href="https://discord.gg/MXvYhg8Bdr" target="_blank">Discord</a><a href="https://github.com/ExoCubeYT" target="_blank">GitHub</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Mod Matrix by ExoCubeYT. Not affiliated with Mojang Studios.</p>
+        <div class="footer-socials">
+          <a class="footer-social" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:16px;height:16px;object-fit:contain;"/></a>
+          <a class="footer-social" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:16px;height:16px;object-fit:contain;"/></a>
+          <a class="footer-social" href="https://github.com/ExoCubeYT" target="_blank"><img src="assets/github.png" alt="GitHub" style="width:16px;height:16px;object-fit:contain;"/></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="arsenal-data.js"></script>
+<script src="shared.js"></script>
+<script>
+(function(){
+  const featSlot = document.getElementById('featured-pack-slot');
+  const grid     = document.getElementById('packs-grid');
+  const featured = PACKS.find(p=>p.featured);
+
+  if(featured){
+    const tagsHtml=(featured.featTags||[]).map(t=>`<span class="fp-tag">${t}</span>`).join('');
+    featSlot.innerHTML=`
+      <div class="featured">
+        <div class="fp-img"><img src="${featured.thumb}" alt="${featured.name}" onerror="this.style.opacity='.2'"/></div>
+        <div class="fp-body">
+          <div class="fp-label">★ Recommended Pack</div>
+          <div class="fp-name">${featured.name}</div>
+          <p class="fp-desc">${featured.desc}</p>
+          <div class="fp-tags">${tagsHtml}</div>
+          <div class="fp-actions">
+            <a href="${featured.dlUrl}" target="_blank" class="btn btn-red">↓ Get Pack</a>
+            ${featured.watchUrl ? `<a href="${featured.watchUrl}" target="_blank" class="btn btn-ghost">Watch Review</a>` : ''}
+          </div>
+        </div>
+      </div>`;
+  }
+
+  PACKS.filter(p=>!p.featured).forEach((p,i)=>{
+    const el=document.createElement('div');
+    el.className='pack-card';
+    el.innerHTML=`
+      <div class="pack-thumb">
+        <img src="${p.thumb}" alt="${p.name}" onerror="this.style.opacity='.2'"/>
+        <span class="pack-badge">${p.badge}</span>
+      </div>
+      <div class="pack-body">
+        <div class="pack-name">${p.name}</div>
+        <p class="pack-desc">${p.desc}</p>
+        <a class="pack-dl" href="${p.dlUrl}" target="_blank">↓ Get</a>
+      </div>`;
+    grid.appendChild(el);
+    setTimeout(()=>el.classList.add('card-in'),60+i*70);
+  });
+})();
+
+(function(){
+  const bento=document.getElementById('tools-bento');
+  const colCycle=['col-8','col-4','col-6','col-6','col-4','col-8'];
+
+  TOOLS.forEach((t,i)=>{
+    const pillsHtml=t.pills.map(p=>`<span class="pill">${p}</span>`).join('');
+    const el=document.createElement('div');
+
+    if(t.wide){
+      el.className='bc wide col-12';
+      el.innerHTML=`
+        <span class="ti">${t.emoji}</span>
+        <div class="wbody">
+          <div class="tl">${t.label}</div>
+          <div class="tn">${t.name}</div>
+          <p class="td">${t.desc}</p>
+          ${pillsHtml?`<div class="pills">${pillsHtml}</div>`:''}
+          <div style="display:flex;gap:9px;flex-wrap:wrap;">
+            <a href="${t.dlUrl}" target="_blank" class="btn btn-red"><svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>Get Link</a>
+            ${t.watchUrl?`<a href="${t.watchUrl}" target="_blank" class="btn btn-ghost">Watch Tutorial</a>`:''}
+          </div>
+        </div>`;
+    } else {
+      el.className='bc '+colCycle[i % colCycle.length];
+      el.innerHTML=`
+        <span class="ti">${t.emoji}</span>
+        <div class="tl">${t.label}</div>
+        <div class="tn">${t.name}</div>
+        <p class="td">${t.desc}</p>
+        ${pillsHtml?`<div class="pills">${pillsHtml}</div>`:''}
+        <a href="${t.dlUrl}" target="_blank" class="btn ${i%2===0?'btn-red':'btn-ghost'}" style="margin-top:8px">Get Link</a>`;
+    }
+    bento.appendChild(el);
+    setTimeout(()=>el.classList.add('card-in'),200+i*80);
+  });
+
+    const discord=document.createElement('div');
+  discord.className='bc col-8';
+  discord.innerHTML=`
+    <span class="ti"><img src="assets/discord.png" alt="Discord" style="width:36px;height:36px;object-fit:contain;"/></span>
+    <div class="tl">Community</div>
+    <div class="tn">Request a Tool or Pack</div>
+    <p class="td">Don't see what you need? Drop a request in the Mod Matrix Discord. The community shapes what gets added next.</p>
+    <a href="https://discord.gg/MXvYhg8Bdr" target="_blank" class="btn btn-red" style="margin-top:8px">Request on Discord</a>`;
+  bento.appendChild(discord);
+  setTimeout(()=>discord.classList.add('card-in'),200+TOOLS.length*80);
+})();
+
+const packSection=document.getElementById('packs-section');
+const toolSection=document.getElementById('tools-section');
+const dividerLine=document.getElementById('divider-line');
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    const f=btn.dataset.filter;
+    packSection.classList.toggle('hidden',f==='tools');
+    toolSection.classList.toggle('hidden',f==='packs');
+    dividerLine.classList.toggle('hidden',f!=='all');
+  });
+});
+</script>
+</body>
+</html>

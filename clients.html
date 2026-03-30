@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" href="assets/haha.ico"/>
+  <link rel="shortcut icon" href="assets/haha.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/haha.ico"/>
+  <meta name="msapplication-TileImage" content="assets/haha.ico"/>
+  <meta name="theme-color" content="#0a0000"/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="ExoCubeYT"/>
+  <meta name="keywords" content="minecraft clients, free minecraft, ghost client, MCPE mods, java client, bedrock, mod matrix, ExoCubeYT"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Minecraft Clients — Mod Matrix"/>
+  <meta property="og:description" content="Browse free Minecraft ghost clients and utility mods for Java, Bedrock and MCPE. All reviewed by ExoCubeYT."/>
+  <meta property="og:url" content="https://modmatrix.in/clients"/>
+  <meta property="og:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta property="og:site_name" content="Mod Matrix"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Minecraft Clients — Mod Matrix"/>
+  <meta name="twitter:description" content="Browse free Minecraft ghost clients and utility mods for Java, Bedrock and MCPE. All reviewed by ExoCubeYT."/>
+  <meta name="twitter:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta name="twitter:creator" content="@ExoCubeYT"/>
+  <link rel="canonical" href="https://modmatrix.in/clients"/>
+  <link rel="apple-touch-icon" href="assets/haha.ico"/>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/haha.ico"/>
+  <title>Mod Matrix — Clients</title>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+        .page-header {
+      padding: calc(var(--nav-h) + 40px) 20px 40px;
+      max-width: 1100px; margin: 0 auto;
+    }
+    .page-header h1 { font-family:'Orbitron',sans-serif; font-size:clamp(1.4rem,4vw,2rem); font-weight:900; margin-bottom:6px; }
+    .page-header p  { color:var(--muted); font-size:.88rem; }
+
+        .controls-wrap {
+      max-width: 1100px; margin: 0 auto;
+      padding: 0 20px 32px;
+      display: flex; flex-direction: column; gap: 14px;
+    }
+    .search-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .search-box {
+      position: relative; flex: 1; min-width: 200px;
+    }
+    .search-box svg { position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.4;pointer-events:none; }
+    .search-input {
+      width: 100%; background: var(--glass); border: 1px solid var(--border2);
+      backdrop-filter: blur(12px); border-radius: 10px;
+      padding: 11px 16px 11px 42px; color: var(--text);
+      font-family: 'Inter', sans-serif; font-size: .86rem; outline: none;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .search-input::placeholder { color: var(--muted); }
+    .search-input:focus { border-color: var(--red-border); box-shadow: 0 0 0 3px rgba(180,0,0,.12); }
+
+        .filter-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-btn {
+      padding: 8px 18px; border-radius: 8px;
+      background: var(--glass); border: 1px solid var(--border);
+      color: var(--muted); font-family:'Inter',sans-serif; font-size:.78rem; font-weight:500;
+      letter-spacing:.04em; cursor:pointer; transition:all .2s; white-space:nowrap;
+    }
+    .filter-btn:hover { color:var(--text); background:var(--glass2); }
+    .filter-btn.active { background:var(--red); border-color:var(--red); color:#fff; }
+    .results-count { font-size:.75rem; color:var(--muted); margin-left:auto; align-self:center; white-space:nowrap; }
+
+        .clients-wrap { max-width:1100px; margin:0 auto; padding:0 20px 80px; }
+    .clients-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    @media(max-width:1000px){ .clients-grid{grid-template-columns:repeat(3,1fr);} }
+    @media(max-width:700px){  .clients-grid{grid-template-columns:repeat(2,1fr); gap:14px;} }
+    @media(max-width:400px){  .clients-grid{grid-template-columns:1fr;} }
+
+        .client-card {
+      background: linear-gradient(145deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden; text-decoration: none; color: var(--text);
+      display: flex; flex-direction: column;
+      transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+      opacity: 0; transform: translateY(16px);
+      cursor: pointer;
+    }
+    .client-card.card-in {
+      opacity: 1; transform: translateY(0);
+      transition: opacity .4s ease, transform .4s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+    .client-card:hover {
+      border-color: rgba(255,255,255,.2);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 24px rgba(0,0,0,.4);
+    }
+    .client-card.hidden { display: none; }
+
+        .card-thumb {
+      width: 100%; aspect-ratio: 16/9;
+      overflow: hidden; position: relative;
+      background: linear-gradient(135deg, rgba(120,0,0,.3), rgba(60,0,0,.2));
+    }
+    .card-thumb img {
+      width:100%; height:100%; object-fit:cover; display:block;
+      transition: transform .15s ease, opacity .15s ease;
+    }
+    .client-card:hover .card-thumb img { transform: scale(1.05); }
+
+        .card-thumb img.loading {
+      opacity: 0;
+      animation: shimmer 1.6s ease-in-out infinite;
+    }
+    @keyframes shimmer { 0%,100%{background-position:-200% 0;} }
+
+        .card-badges {
+      position:absolute; top:8px; left:8px; right:8px;
+      display:flex; align-items:flex-start; justify-content:space-between; gap:4px;
+      opacity:0; transition:opacity .2s ease;
+    }
+    .client-card:hover .card-badges { opacity:1; }
+    .card-badge-left  { display:flex; gap:4px; flex-wrap:wrap; }
+    .card-badge-right { flex-shrink:0; }
+
+        .card-body { padding: 12px 14px 14px; display:flex; flex-direction:column; gap:8px; flex:1; }
+    .card-name {
+      font-family: 'Orbitron', sans-serif; font-size: .88rem; font-weight: 700;
+      color: #e06060;
+      color: #e06060;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      text-decoration: none;
+    }
+    .client-card:hover .card-name { color: #ff8080; }
+    .card-tags { display:flex; gap:5px; flex-wrap:wrap; }
+    .card-tag {
+      font-size:.6rem; font-weight:600; letter-spacing:.07em; text-transform:uppercase;
+      padding:2px 8px; border-radius:6px;
+      background:rgba(200,0,0,.12); border:1px solid rgba(200,0,0,.2); color:#ff6060;
+    }
+    .card-plats { display:flex; gap:5px; flex-wrap:wrap; }
+
+        .card-dl {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      background: linear-gradient(135deg, var(--red), #880000);
+      border: none; border-radius: 8px; color: #fff;
+      font-family: 'Inter', sans-serif; font-size: .82rem; font-weight: 600;
+      padding: 11px 16px; text-decoration: none; cursor: pointer;
+      transition: transform .12s ease, filter .12s ease;
+      min-height: 40px; width: 100%;
+      position: relative; overflow: hidden;
+    }
+    .card-dl::before { content:''; position:absolute;inset:0; background:linear-gradient(135deg,rgba(255,255,255,.1),transparent); opacity:0; transition:opacity .2s; }
+    .card-dl:hover { transform:translateY(-1px); filter:brightness(1.1); }
+    .card-dl:hover::before { opacity:1; }
+    .card-dl:active { transform:scale(.98); }
+
+    .no-results { grid-column:1/-1; text-align:center; padding:60px 20px; color:var(--muted); display:none; }
+    .no-results.show { display:block; }
+
+    @media(max-width:700px){
+      .card-body { padding:10px 12px 12px; }
+      .card-name  { font-size:.82rem; }
+      .card-dl    { font-size:.78rem; padding:9px 12px; min-height:36px; }
+    }
+  </style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="orb orb1"></div><div class="orb orb2"></div>
+<video id="bg-video" autoplay muted loop playsinline></video>
+<canvas id="bg-canvas"></canvas>
+<div class="bg-gradient"></div>
+<div id="cursor-dot"></div><div id="cursor-ring"></div>
+
+<nav>
+  <a class="logo" href="index.html" data-glitch>MOD MATRIX</a>
+  <ul class="nav-center">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="clients.html" class="active">Clients</a></li>
+    <li><a href="arsenal.html">Arsenal</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a class="nav-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+      <a class="nav-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a><a href="clients.html" class="active">Clients</a>
+  <a href="arsenal.html">Arsenal</a><a href="about.html">About</a>
+  <div class="mobile-menu-divider"></div>
+  <div class="mobile-menu-socials">
+    <a class="ms-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> YouTube</a>
+    <a class="ms-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> Discord</a>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="page-header">
+    <div class="sec-tag">// Download</div>
+    <h1>Minecraft <span style="color:var(--red2)">Clients</span></h1>
+    <p>Ghost clients, utility mods, and hack clients reviewed by ExoCubeYT — Java, Bedrock &amp; MCPE.</p>
+  </div>
+
+  <div class="controls-wrap">
+    <div class="search-row">
+      <div class="search-box">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input class="search-input" id="search" type="search" placeholder="Search clients…" autocomplete="off"/>
+      </div>
+      <span class="results-count" id="count"></span>
+    </div>
+    <div class="filter-row">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+      <button class="filter-btn" data-filter="bedrock">Bedrock</button>
+      <button class="filter-btn" data-filter="mcpe">MCPE</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="discontinued">Discontinued</button>
+    </div>
+  </div>
+
+  <div class="clients-wrap">
+    <div class="clients-grid" id="grid">
+      <div class="no-results" id="no-results">No clients match your search or filter.</div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="logo" href="index.html">MOD MATRIX</a><p>Free Minecraft client reviews for Java, Bedrock &amp; MCPE. By ExoCubeYT.</p></div>
+        <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="clients.html">Clients</a><a href="arsenal.html">Arsenal</a><a href="about.html">About</a></div>
+        <div class="footer-col"><h4>Links</h4><a href="https://youtube.com/c/ExoCubeYT" target="_blank">YouTube</a><a href="https://discord.gg/MXvYhg8Bdr" target="_blank">Discord</a><a href="https://github.com/ExoCubeYT" target="_blank">GitHub</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Mod Matrix by ExoCubeYT. Not affiliated with Mojang Studios.</p>
+        <div class="footer-socials"><a class="footer-social" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:16px;height:16px;object-fit:contain;"/></a><a class="footer-social" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:16px;height:16px;object-fit:contain;"/></a></div>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<script src="clients-data.js"></script>
+<script src="shared.js"></script>
+<script>
+const PLAT_LABELS={java:'<img src="assets/java.png" style="width:12px;height:12px;object-fit:contain;vertical-align:middle;margin-right:3px;"/> Java',bedrock:'<img src="assets/bedrock.png" style="width:12px;height:12px;object-fit:contain;vertical-align:middle;margin-right:3px;"/> Bedrock',mcpe:'<img src="assets/mcpe.png" style="width:12px;height:12px;object-fit:contain;vertical-align:middle;margin-right:3px;"/> MCPE'};
+const PLAT_CLS={java:'plat-java',bedrock:'plat-bedrock',mcpe:'plat-mcpe'};
+const STATUS_LBL={active:'Active',discontinued:'Discontinued',beta:'Beta'};
+const STATUS_CLS={active:'status-active',discontinued:'status-discontinued',beta:'status-beta'};
+
+const grid=document.getElementById('grid');
+const noRes=document.getElementById('no-results');
+const countEl=document.getElementById('count');
+
+let activeFilt='all', searchQ='';
+
+function buildCard(c){
+  const a=document.createElement('a');
+  a.className='client-card';
+  a.href=`clients/${c.id}.html`;
+  a.dataset.platforms=c.platforms.join(',');
+  a.dataset.status=c.status;
+  a.dataset.name=c.name.toLowerCase()+' '+(c.tags||[]).join(' ').toLowerCase();
+
+  const platsHtml=c.platforms.map(p=>`<span class="plat ${PLAT_CLS[p]}">${PLAT_LABELS[p]}</span>`).join('');
+  const tagsHtml=(c.tags||[]).map(t=>`<span class="card-tag">${t}</span>`).join('');
+
+  a.innerHTML=`
+    <div class="card-thumb">
+      <img src="${c.thumb}" alt="${c.name}" loading="lazy" onerror="this.style.opacity='.3'"/>
+      <div class="card-badges">
+        <div class="card-badge-left">${platsHtml}</div>
+        <div class="card-badge-right"><span class="status ${STATUS_CLS[c.status]}">${STATUS_LBL[c.status]}</span></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">${c.name}</div>
+      <div class="card-tags">${tagsHtml}</div>
+      <a class="card-dl" href="clients/${c.id}.html">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        View &amp; Download
+      </a>
+    </div>`;
+  return a;
+}
+
+const cards=[];
+CLIENTS.forEach((c,i)=>{
+  const el=buildCard(c);
+  grid.insertBefore(el,noRes);
+  cards.push(el);
+  setTimeout(()=>el.classList.add('card-in'),60+i*70);
+});
+
+function updateCount(){
+  const v=cards.filter(c=>!c.classList.contains('hidden')).length;
+  countEl.textContent=v+' client'+(v===1?'':'s');
+}
+updateCount();
+
+function applyFilters(){
+  let any=false;
+  cards.forEach(c=>{
+    const platOk=activeFilt==='all'||c.dataset.platforms.split(',').includes(activeFilt)||c.dataset.status===activeFilt;
+    const nameOk=c.dataset.name.includes(searchQ);
+    const show=platOk&&nameOk;
+    c.classList.toggle('hidden',!show);
+    if(show)any=true;
+  });
+  noRes.classList.toggle('show',!any);
+  updateCount();
+}
+
+document.querySelectorAll('.filter-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilt=btn.dataset.filter;
+    applyFilters();
+  });
+});
+document.getElementById('search').addEventListener('input',e=>{
+  searchQ=e.target.value.toLowerCase().trim();
+  applyFilters();
+});
+</script>
+</body>
+</html>

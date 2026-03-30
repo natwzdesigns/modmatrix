@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Disclaimer — Mod Matrix</title>
+  <meta name="description" content="Disclaimer for Mod Matrix. Mod Matrix is not affiliated with Mojang Studios or any game publisher."/>
+  <meta name="robots" content="index, follow"/>
+  <meta name="author" content="ExoCubeYT"/>
+  <meta property="og:title" content="Disclaimer — Mod Matrix"/>
+  <meta property="og:description" content="Disclaimer for Mod Matrix."/>
+  <meta property="og:url" content="https://modmatrix.in/disclaimer"/>
+  <meta property="og:image" content="https://modmatrix.in/assets/haha.ico"/>
+  <meta property="og:site_name" content="Mod Matrix"/>
+  <meta name="twitter:card" content="summary"/>
+  <link rel="canonical" href="https://modmatrix.in/disclaimer"/>
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/haha.ico"/>
+  <link rel="icon" type="image/x-icon" href="assets/haha.ico"/>
+  <link rel="shortcut icon" href="assets/haha.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/haha.ico"/>
+  <meta name="msapplication-TileImage" content="assets/haha.ico"/>
+  <meta name="theme-color" content="#0a0000"/>
+  <link rel="shortcut icon" type="image/x-icon" href="assets/haha.ico"/>
+  <link rel="apple-touch-icon" href="assets/haha.ico"/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    .legal-wrap{max-width:860px;margin:0 auto;padding:calc(var(--nav-h) + 52px) 24px 100px;}
+    .legal-header{margin-bottom:48px;}
+    .legal-header .sec-tag{margin-bottom:10px;}
+    .legal-header h1{font-family:'Orbitron',sans-serif;font-size:clamp(1.6rem,4vw,2.4rem);font-weight:900;margin-bottom:12px;}
+    .legal-header h1 span{background:linear-gradient(90deg,var(--red2),#ff6666);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+    .legal-header p{color:var(--muted);font-size:.85rem;}
+    .legal-updated{display:inline-flex;align-items:center;gap:7px;background:var(--glass);border:1px solid var(--red-border);padding:5px 14px;border-radius:100px;font-size:.72rem;color:var(--red2);letter-spacing:.06em;margin-bottom:40px;}
+    .legal-section{margin-bottom:36px;}
+    .legal-section h2{font-family:'Orbitron',sans-serif;font-size:.9rem;font-weight:800;letter-spacing:.06em;margin-bottom:12px;color:var(--text);display:flex;align-items:center;gap:10px;}
+    .legal-section h2::before{content:'';display:block;width:3px;height:16px;background:var(--red);border-radius:2px;flex-shrink:0;}
+    .legal-section p,.legal-section li{color:var(--muted);font-size:.88rem;line-height:1.85;}
+    .legal-section ul{padding-left:20px;display:flex;flex-direction:column;gap:6px;margin-top:8px;}
+    .legal-section li::marker{color:var(--red2);}
+    .legal-divider{height:1px;background:linear-gradient(90deg,var(--red-border),transparent);margin:32px 0;}
+    .legal-nav{display:flex;gap:12px;flex-wrap:wrap;margin-top:52px;padding-top:32px;border-top:1px solid var(--border);}
+    .legal-nav a{color:var(--muted);text-decoration:none;font-size:.8rem;padding:7px 16px;border-radius:8px;background:var(--glass);border:1px solid var(--border);transition:color .2s,border-color .2s;}
+    .legal-nav a:hover{color:var(--red2);border-color:var(--red-border);}
+    .legal-nav a.current{color:var(--red2);border-color:var(--red-border);}
+    .warn-box{background:rgba(200,0,0,.08);border:1px solid rgba(200,0,0,.25);border-radius:12px;padding:18px 20px;margin:16px 0;}
+    .warn-box p{color:var(--text) !important;font-size:.88rem;line-height:1.75;}
+  </style>
+</head>
+<body>
+<div class="noise"></div>
+<div class="orb orb1"></div><div class="orb orb2"></div>
+<canvas id="bg-canvas"></canvas>
+<div class="bg-gradient"></div>
+<div id="cursor-dot"></div><div id="cursor-ring"></div>
+
+<nav>
+  <a class="logo" href="index.html" data-glitch>MOD MATRIX</a>
+  <ul class="nav-center">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="clients.html">Clients</a></li>
+    <li><a href="arsenal.html">Arsenal</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="nav-social">
+      <a class="nav-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+      <a class="nav-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:18px;height:18px;object-fit:contain;display:block;"/></a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a><a href="clients.html">Clients</a>
+  <a href="arsenal.html">Arsenal</a><a href="about.html">About</a>
+  <div class="mobile-menu-divider"></div>
+  <div class="mobile-menu-socials">
+    <a class="ms-yt" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> YouTube</a>
+    <a class="ms-disc" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="" style="width:14px;height:14px;object-fit:contain;vertical-align:middle;margin-right:6px;"/> Discord</a>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div class="legal-wrap">
+
+    <div class="legal-header">
+      <div class="sec-tag">// Legal</div>
+      <h1><span>Disclaimer</span></h1>
+      <p>Important information about Mod Matrix, its relationship with third parties, and the nature of the content we provide.</p>
+    </div>
+
+    <div class="legal-updated">📅 Last updated: March 2026</div>
+
+    <div class="warn-box reveal">
+      <p>⚠️ <strong>Not affiliated with Mojang:</strong> Mod Matrix is an independent fan project and is NOT affiliated with, endorsed by, or connected to Mojang Studios, Microsoft Corporation, or any official Minecraft brand.</p>
+    </div>
+
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>1. No Affiliation with Mojang Studios</h2>
+      <p>Minecraft is a registered trademark of Mojang Studios, a subsidiary of Microsoft Corporation. Mod Matrix is an independent fan-operated review platform. We are not affiliated with, sponsored by, endorsed by, or in any way officially connected to Mojang Studios, Microsoft, or any of their subsidiaries. All Minecraft-related trademarks, logos, and product names are the property of their respective owners.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>2. Third-Party Software Disclaimer</h2>
+      <p>All software listed, linked, or reviewed on Mod Matrix is created by independent third-party developers. Mod Matrix does not develop, own, maintain, or control any of the clients, mods, or tools listed on this Site (with the exception of EXOBOX, a now-discontinued project). We are a review and aggregation platform only.</p>
+      <ul>
+        <li>Mod Matrix is not responsible for any issues, bugs, or damages caused by third-party software.</li>
+        <li>Third-party developers may update, change, or discontinue their software at any time.</li>
+        <li>We cannot guarantee the continued availability of any linked download.</li>
+      </ul>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>3. Use at Your Own Risk</h2>
+      <p>The use of Minecraft modification software, ghost clients, utility mods, and similar tools may violate the Terms of Service of Minecraft, specific servers, or other platforms. By downloading and using any software linked from Mod Matrix:</p>
+      <ul>
+        <li>You accept full responsibility for any consequences including but not limited to account bans, server kicks, or game instability.</li>
+        <li>You acknowledge that Mod Matrix and ExoCubeYT bear no responsibility for any actions taken against your account or device.</li>
+        <li>You agree to use the software responsibly and in accordance with applicable platform rules.</li>
+      </ul>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>4. No Malware Guarantee</h2>
+      <p>While ExoCubeYT personally reviews and tests software before listing it on Mod Matrix, we cannot make absolute guarantees about the safety or security of any third-party file. Software changes over time and new versions may behave differently. We strongly recommend:</p>
+      <ul>
+        <li>Scanning all downloaded files with a reputable antivirus before running them.</li>
+        <li>Watching the review video on YouTube before downloading to understand what you're installing.</li>
+        <li>Not running unfamiliar software with administrator privileges unless necessary.</li>
+      </ul>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>5. Accuracy of Information</h2>
+      <p>We strive to keep all information on Mod Matrix accurate and up to date. However, software versions, compatibility information, and download links may become outdated. Mod Matrix makes no warranty that all information on the Site is current, complete, or error-free. If you notice outdated or incorrect information, please let us know via Discord.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>6. Earnings Disclosure</h2>
+      <p>Mod Matrix uses link shortener services on download links. This means we may earn a small amount of revenue when users click download links through these services. This helps fund the YouTube channel and site. This is disclosed transparently and does not affect which clients we review or recommend.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>7. Terminology Clarification</h2>
+      <p>Mod Matrix uses terms such as "hack client," "hacked client," and "ghost client" throughout this site. These are widely used community terms for Minecraft utility mods and modification clients. Their use on this site is purely for search engine optimisation (SEO) purposes — they describe the same category of software as "utility mods," "modification clients," or "client-side mods."</p>
+      <p>These modifications operate entirely client-side and are compliant with the <a href="https://www.minecraft.net/en-us/eula" target="_blank" style="color:var(--red2);text-decoration:none;">Minecraft End User License Agreement (EULA)</a> and Mojang's published guidelines. The use of the word "hack" in this context carries no implication of illegal activity, malicious intent, or violation of any law or platform rule. It is a standard informal term within the Minecraft modding community.</p>
+      <p>Mod Matrix does not endorse or facilitate any activity that violates the Minecraft EULA, any server's terms of service, or any applicable law.</p>
+    </div>
+    <div class="legal-divider"></div>
+
+    <div class="legal-section reveal">
+      <h2>8. Contact</h2>
+      <p>For questions or concerns about any content on Mod Matrix, please reach out via the <a href="https://discord.gg/MXvYhg8Bdr" target="_blank" style="color:var(--red2);text-decoration:none;">Mod Matrix Discord</a> or YouTube channel.</p>
+    </div>
+
+    <div class="legal-nav">
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="disclaimer.html" class="current">Disclaimer</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand"><a class="logo" href="index.html">MOD MATRIX</a><p>Free Minecraft client reviews for Java, Bedrock &amp; MCPE. Reviewed by ExoCubeYT.</p></div>
+        <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="clients.html">Clients</a><a href="arsenal.html">Arsenal</a><a href="about.html">About</a></div>
+        <div class="footer-col"><h4>Links</h4><a href="https://youtube.com/c/ExoCubeYT" target="_blank">YouTube</a><a href="https://discord.gg/MXvYhg8Bdr" target="_blank">Discord</a><a href="https://github.com/ExoCubeYT" target="_blank">GitHub</a></div>
+        <div class="footer-col"><h4>Legal</h4><a href="terms.html">Terms of Use</a><a href="privacy.html">Privacy Policy</a><a href="disclaimer.html">Disclaimer</a></div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Mod Matrix by ExoCubeYT. Not affiliated with Mojang Studios.</p>
+        <div class="footer-socials">
+          <a class="footer-social" href="https://youtube.com/c/ExoCubeYT" target="_blank"><img src="assets/youtube.png" alt="YouTube" style="width:16px;height:16px;object-fit:contain;"/></a>
+          <a class="footer-social" href="https://discord.gg/MXvYhg8Bdr" target="_blank"><img src="assets/discord.png" alt="Discord" style="width:16px;height:16px;object-fit:contain;"/></a>
+          <a class="footer-social" href="https://github.com/ExoCubeYT" target="_blank"><img src="assets/github.png" alt="GitHub" style="width:16px;height:16px;object-fit:contain;"/></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="shared.js"></script>
+</body>
+</html>
