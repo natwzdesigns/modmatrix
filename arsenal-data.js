@@ -5,7 +5,7 @@ const PACKS = [
     thumb:    "assets/1.8.9.png",
     badge:    "FPS",
     desc:     "The Top 6 BEST 16x/32x Bedwars/PvP Texture Packs - FPS Boost (1.8.9).",
-    dlUrl:    "https://youtube.com/c/ExoCubeYT",
+    dlUrl:    "https://link-hub.net/463794/DXkvDjK95rqi",
     watchUrl: "https://youtu.be/eKD6itEmFVY?si=bYyW1lwXYAdu4hEt",
     featured: true,
     featTags: ["Low Lag", "Short Swords", "Low Fire", "Java 1.8.9"]
