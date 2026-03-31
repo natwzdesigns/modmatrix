@@ -3,7 +3,7 @@ const CLIENTS = [
   {
     id:          "borion",
     name:        "Borion Client",
-    thumb:       "assets/borion.png",
+    thumb:       "assets/borion.webp",
     thumbDetail: "../assets/borion.webp",
     platforms:   [ "bedrock"],
     tags:        ["Hack Client", "PvP"],
@@ -30,8 +30,8 @@ const CLIENTS = [
   {
     id:          "lumina",
     name:        "Lumina Client",
-    thumb:       "assets/lumina.png",
-    thumbDetail: "../assets/lumina.png",
+    thumb:       "assets/lumina.webp",
+    thumbDetail: "../assets/lumina.webp",
     platforms:   [ "mcpe"],
     tags:        ["Hack Client", "Android"],
     version:     "RC 4.1.9",
@@ -63,8 +63,8 @@ const CLIENTS = [
       {
       id:          "scald",
       name:        "Scald Client",
-      thumb:       "assets/scald.png",
-      thumbDetail: "../assets/scald.png",
+      thumb:       "assets/scald.webp",
+      thumbDetail: "../assets/scald.webp",
       platforms:   ["bedrock"],
       tags:        ["Ghost Client", "Paid"],
       version:     "v1.8",
