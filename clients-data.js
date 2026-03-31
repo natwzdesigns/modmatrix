@@ -33,7 +33,7 @@ const CLIENTS = [
     thumb:       "assets/lumina.webp",
     thumbDetail: "../assets/lumina.webp",
     platforms:   [ "mcpe"],
-    tags:        ["Hack Client", "Android"],
+    tags:        ["Hack Client", "MCPE"],
     version:     "RC 4.1.9",
     status:      "active",
     desc:        "Premium Android utility client for Minecraft Bedrock — cross-platform proxy support lets iOS and PC players connect too. Clean glassmorphic UI, PvP tools, FPS boosts and more.",
