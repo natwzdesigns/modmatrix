@@ -2,7 +2,7 @@ const PACKS = [
   {
     id:       "1.8.9-bedwars-packs",
     name:     "Top 6 1.8.9 Texture Packs",
-    thumb:    "assets/1.8.9.png",
+    thumb:    "assets/1.8.9.webp",
     badge:    "FPS",
     desc:     "The Top 6 BEST 16x/32x Bedwars/PvP Texture Packs - FPS Boost (1.8.9).",
     dlUrl:    "https://link-hub.net/463794/DXkvDjK95rqi",
