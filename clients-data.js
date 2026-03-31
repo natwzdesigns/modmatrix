@@ -4,7 +4,7 @@ const CLIENTS = [
     id:          "borion",
     name:        "Borion Client",
     thumb:       "assets/borion.png",
-    thumbDetail: "../assets/borion.png",
+    thumbDetail: "../assets/borion.webp",
     platforms:   [ "bedrock"],
     tags:        ["Hack Client", "PvP"],
     version:     "Latest",
