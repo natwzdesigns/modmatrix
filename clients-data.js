@@ -1,6 +1,23 @@
 const CLIENTS = [
 
   {
+      id:          "velaris",
+      name:        "Velaris Client",
+      thumb:       "assets/velaris.png",
+      thumbDetail: "../assets/velaris.png",
+      platforms:   ["java"],
+      tags:        ["Hack Client", "Free"],
+      version:     "Beta",
+      status:      "active",
+      desc:        "Velaris is a Minecraft Java “hack client” focused on PvP automation, combat advantages, and bypassing anti-cheat systems.",
+      longDesc:    "Includes systems like AutoCrystal, AutoAnchor, AutoTotem, AimAssist, and TriggerBot, which automate PvP actions and optimize damage output while minimizing user input. These modules are designed to react instantly and consistently, giving a major advantage in fights.",
+      features:    ["Auto Mace", "Auto Sword", "Rappture Shield Drain", "Auto Anchor", "Auto Totem", "Fake Lag", "W-Tap", "Auto Crystal"],
+      versions: [
+        { ver:"Beta", label:"Latest", date:"2026-04", dlUrl:"Includes systems like AutoCrystal, AutoAnchor, AutoTotem, AimAssist, and TriggerBot, which automate PvP actions and optimize damage output while minimizing user input. These modules are designed to react instantly and consistently, giving a major advantage in fights.", notes:"Full Minecraft 1.21.11 support." }
+     ]
+    },
+
+  {
     id:          "borion",
     name:        "Borion Client",
     thumb:       "assets/borion.webp",
