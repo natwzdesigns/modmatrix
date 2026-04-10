@@ -13,7 +13,7 @@ const CLIENTS = [
       longDesc:    "Includes systems like AutoCrystal, AutoAnchor, AutoTotem, AimAssist, and TriggerBot, which automate PvP actions and optimize damage output while minimizing user input. These modules are designed to react instantly and consistently, giving a major advantage in fights.",
       features:    ["Auto Mace", "Auto Sword", "Rappture Shield Drain", "Auto Anchor", "Auto Totem", "Fake Lag", "W-Tap", "Auto Crystal"],
       versions: [
-        { ver:"Beta", label:"Latest", date:"2026-04", dlUrl:"Includes systems like AutoCrystal, AutoAnchor, AutoTotem, AimAssist, and TriggerBot, which automate PvP actions and optimize damage output while minimizing user input. These modules are designed to react instantly and consistently, giving a major advantage in fights.", notes:"Full Minecraft 1.21.11 support." }
+        { ver:"Beta", label:"Latest", date:"2026-04", dlUrl:"https://link-target.net/463794/ShWfULNLfCOB", notes:"Full Minecraft 1.21.11 support." }
      ]
     },
 
