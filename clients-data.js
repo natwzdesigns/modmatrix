@@ -3,8 +3,8 @@ const CLIENTS = [
   {
       id:          "velaris",
       name:        "Velaris Client",
-      thumb:       "assets/velaris.png",
-      thumbDetail: "../assets/velaris.png",
+      thumb:       "assets/velaris.webp",
+      thumbDetail: "../assets/velaris.webp",
       platforms:   ["java"],
       tags:        ["Hack Client", "Free"],
       version:     "Beta",
