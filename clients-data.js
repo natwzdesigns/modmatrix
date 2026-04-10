@@ -1,6 +1,6 @@
 const CLIENTS = [
 
-  {
+   {
       id:          "velaris",
       name:        "Velaris Client",
       thumb:       "assets/velaris.webp",
