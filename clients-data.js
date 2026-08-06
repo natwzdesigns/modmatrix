@@ -1,5 +1,32 @@
 const CLIENTS = [
 
+          {
+    id:          "primordial",
+    name:        "Primordial Client",
+    thumb:       "assets/primordial.webp",
+    thumbDetail: "../assets/primordial.webp",
+    platforms:   ["bedrock"],
+    tags:        ["Hack Client", "Free"],
+    version:     "Latest",
+    status:      "active",
+    desc:        "Premium Minecraft Java ghost client built for competitive PvP with advanced combat modules, visual enhancements, and extensive legit customisation.",
+    longDesc:    "Primordial Client is a premium Minecraft Java ghost client focused on delivering a smooth and highly configurable competitive experience. It includes advanced combat assistance, movement utilities, visual modules, and a modern interface designed for players who want powerful features while maintaining a polished workflow.",
+    features: [
+      "Aim Assist",
+      "TriggerBot",
+      "Auto Clicker",
+      "Reach",
+      "Velocity",
+      "ESP",
+      "Bridge Assist",
+      "Customisable GUI"
+    ],
+    versions: [
+      {
+        ver:"Latest", label:"Latest", date:"2026-08", dlUrl:"https://primordialclient.com/", notes:"Visit the official website for the newest release." }
+    ]
+  },
+
         {
       id:          "velaris",
       name:        "Velaris Client",
