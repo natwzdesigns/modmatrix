@@ -23,7 +23,7 @@ const CLIENTS = [
     ],
     versions: [
       {
-        ver:"Latest", label:"Latest", date:"2026-08", dlUrl:"https://primordialclient.com/", notes:"Visit the official website for the newest release." }
+        ver:"Latest", label:"Latest", date:"2026-08", dlUrl:"https://youtube.com/", notes:"Visit the official website for the newest release." }
     ]
   },
 
