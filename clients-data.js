@@ -9,8 +9,8 @@ const CLIENTS = [
     tags:        ["Hack Client", "Free"],
     version:     "Latest",
     status:      "active",
-    desc:        "Premium Minecraft Java ghost client built for competitive PvP with advanced combat modules, visual enhancements, and extensive legit customisation.",
-    longDesc:    "Primordial Client is a premium Minecraft Java ghost client focused on delivering a smooth and highly configurable competitive experience. It includes advanced combat assistance, movement utilities, visual modules, and a modern interface designed for players who want powerful features while maintaining a polished workflow.",
+    desc:        "Premium Minecraft Bedrock Hack client built for competitive PvP with advanced combat modules, visual enhancements, and extensive legit customisation.",
+    longDesc:    "Primordial Client is a premium Minecraft Bedrock Hack client focused on delivering a smooth and highly configurable competitive experience. It includes advanced combat assistance, movement utilities, visual modules, and a modern interface designed for players who want powerful features while maintaining a polished workflow.",
     features: [
       "Aim Assist",
       "TriggerBot",
