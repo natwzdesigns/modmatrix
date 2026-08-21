@@ -24,7 +24,7 @@ const CLIENTS = [
     versions: [
       {
          ver:"RC 2.1.1", label:"Latest", date:"2026-08", dlUrl:"https://link-target.net/463794/MjDPKgfWwkjL", notes:"Full Minecraft 1.26.44 support." },
-        { ver:"RC 2.1.0", label:"Stable", date:"2026-08", dlUrl:"https://link-hub.net/463794/mbd3IarOB2KY", notes:"Visit the official website for the newest release." }
+        { ver:"RC 2.1.0", label:"Stable", date:"2026-08", dlUrl:"https://link-hub.net/463794/mbd3IarOB2KY", notes:"Full Minecraft 1.26.40 support." }
     ]
   },
 
