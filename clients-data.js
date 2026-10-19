@@ -1,5 +1,34 @@
 const CLIENTS = [
 
+            {
+    id:          "delicate",
+    name:        "Delicate Client",
+    thumb:       "assets/delicate.webp",
+    thumbDetail: "../assets/delicate.webp",
+    platforms:   ["java"],
+    tags:        ["Hack Client", "Free"],
+    version:     "Latest",
+    status:      "active",
+    desc:        "A utility client for Minecraft with 222 modules for PvP, movement, building, exploration and survival. Every module follows a single AntiCheat panel that accounts for Grim's checks and 2b2t's packet limiter.",
+    longDesc:    "Delicate Client is a free Minecraft Java utility client featuring 222 modules for PvP, movement, building, exploration and survival. Its unified AntiCheat panel is designed around Grim's checks and 2b2t's packet limiter, bringing a wide range of utilities together in one configurable client.",
+    features: [
+      "222 modules across multiple categories",
+      "Combat: AutoCrystal, KillAura",
+      "Movement: ElytraFly, Speed",
+      "World: HighwayBuilder, StashFinder",
+      "Render: ESP, Nametags"
+    ],
+    versions: [
+      {
+        ver:   "1.1.1",
+        label: "Latest",
+        date:  "2026-10",
+        dlUrl: "https://direct-link.net/463794/py6zYrEDw3r4",
+        notes: "Supports Minecraft Java Edition 26.3."
+      }
+    ]
+  },
+
           {
     id:          "primordial",
     name:        "Primordial Client",
