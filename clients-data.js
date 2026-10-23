@@ -1,5 +1,34 @@
 const CLIENTS = [
 
+  {
+    id:          "echo",
+    name:        "Echo Client",
+    thumb:       "assets/echo.webp",
+    thumbDetail: "../assets/echo.webp",
+    platforms:   ["java"],
+    tags:        ["Hack Client", "Paid"],
+    version:     "Latest",
+    status:      "active",
+    desc:        "Your go-to client for undetected cheating. Echo Client brings a ruthless edge to Minecraft Java PvP, combining precision, automation, and lightning-fast reactions into one powerful package.",
+    longDesc:    "Echo Client is a premium Minecraft Java client built for players seeking a competitive PvP experience. With a collection of combat automation and tactical utilities, Echo brings together precision targeting, rapid responses, and smart in-game assistance in a streamlined client. Whether you're taking fights head-on or relying on well-timed plays, Echo is designed to put powerful tools at your fingertips.",
+    features: [
+      "Combat: Auto Mace, TriggerBot",
+      "Aim Assist for precision targeting",
+      "Pearl Catch for tactical reactions",
+      "Auto Totem for automated survival",
+      "Auto Xbow Cart utilities"
+    ],
+    versions: [
+      {
+        ver:   "Latest",
+        label: "Latest",
+        date:  "2026-10",
+        dlUrl: "https://gated.to/QcKsYX2Df",
+        notes: "Supports Minecraft Java Edition 26.3."
+      }
+    ]
+  },
+
             {
     id:          "delicate",
     name:        "Delicate Client",
