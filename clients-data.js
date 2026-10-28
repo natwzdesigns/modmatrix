@@ -153,7 +153,8 @@ const CLIENTS = [
       "Open source — GitHub: TheProjectLumina/LuminaClient"
     ],
     versions: [
-      { ver:"RC 4.1.15", label:"Latest", date:"2026-09",   dlUrl:"https://link-hub.net/463794/op5ChrsHeBPq", notes:"Full Minecraft 1.26.50-51 support." },
+      { ver:"RC 4.1.17", label:"Latest", date:"2026-010",   dlUrl:"https://link-center.net/463794/r4BwWiH3om5E", notes:"Full Minecraft 1.26.60 support." },
+      { ver:"RC 4.1.15", label:"Stable", date:"2026-09",   dlUrl:"https://link-hub.net/463794/op5ChrsHeBPq", notes:"Full Minecraft 1.26.50-51 support." },
       { ver:"RC 4.1.12", label:"Stable", date:"2026-08",   dlUrl:"https://link-center.net/463794/0G47lXnsiWvt", notes:"Full Minecraft 1.26.40 support." },
       { ver:"RC 4.1.11", label:"Stable", date:"2026-06",   dlUrl:"https://link-hub.net/463794/v97hL8aZDwWb", notes:"Full Minecraft 1.26.30.5 support." },
       { ver:"RC 4.1.10", label:"Stable", date:"2026-05",   dlUrl:"https://link-center.net/463794/MBK2Zc01Uvcc", notes:"Full Minecraft 1.26.20.04 support." },
