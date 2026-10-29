@@ -24,7 +24,7 @@ const CLIENTS = [
         ver:   "Latest",
         label: "Latest",
         date:  "2026-10",
-        dlUrl: "https://xyz.com",
+        dlUrl: "https://link-center.net/463794/SiDNYGUAGewi",
         notes: "Minecraft Bedrock Edition 1.26.60 support."
       }
     ]
