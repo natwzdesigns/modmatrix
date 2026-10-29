@@ -1,5 +1,35 @@
 const CLIENTS = [
 
+    {
+    id:          "fp",
+    name:        "French Packet",
+    thumb:       "assets/fp.webp",
+    thumbDetail: "../assets/fp.webp",
+    platforms:   ["bedrock"],
+    tags:        ["Hack Client", "Free"],
+    version:     "Latest",
+    status:      "active",
+    desc:        "French Packet is a free Minecraft Bedrock utility client featuring 200+ modules for combat, movement, visuals, and gameplay customisation. Packed with powerful tools and a streamlined experience, it brings an extensive collection of utilities into one versatile client.",
+    longDesc:    "French Packet is a feature-rich Minecraft Bedrock utility client designed for players looking for extensive customisation and a wide range of gameplay tools. With 200+ modules spanning combat assistance, movement enhancements, visual improvements, and general utilities, it offers a versatile all-in-one experience. Its module collection includes Aura, Auto Clicker, TriggerBot, ESP, Fly, AirJump, and more, giving users plenty of options to configure their gameplay.",
+    features: [
+      "200+ modules across multiple categories",
+      "Combat: Aura, Auto Clicker, TriggerBot",
+      "Visual: ESP and enhanced player visibility",
+      "Movement: Fly, AirJump",
+      "Extensive gameplay customisation",
+      "Free to use"
+    ],
+    versions: [
+      {
+        ver:   "Latest",
+        label: "Latest",
+        date:  "2026-10",
+        dlUrl: "https://xyz.com",
+        notes: "Minecraft Bedrock Edition 1.26.60 support."
+      }
+    ]
+  },
+
   {
     id:          "echo",
     name:        "Echo Client",
